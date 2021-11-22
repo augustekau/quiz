@@ -5,3 +5,10 @@
 
 /* Importing Datepicker SCSS file. */
 @import "~ngx-bootstrap/datepicker/bs-datepicker";
+
+body {
+  background-image: url(assets/img/qbg.jpeg);
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center center;
+}

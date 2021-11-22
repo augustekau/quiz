@@ -1,0 +1,70 @@
+:host {
+  /* Spalvu kintamieji */
+  $color-red: #f42e35;
+  $color-gray: #3c3c3c;
+  $color-black: #151515;
+
+  body {
+    /* Nustatome pagrindine teksto spalva visai svetainei */
+    color: $color-black;
+  }
+
+  .text {
+    // Sugeneruojama: .text-red
+    &-red {
+      color: $color-red;
+    }
+
+    // Sugeneruojama: .text-gray
+    &-gray {
+      color: $color-gray;
+    }
+
+    // Sugeneruojama: .text-black
+    &-black {
+      color: $color-black;
+    }
+  }
+  .quiz-wrapper {
+    padding: 90px 30px;
+  }
+
+  .quiz-title {
+    /* Ši dalis sugeneruos css klase: .quiz-title__subtitle */
+    &__subtitle {
+      color: $color-red;
+    }
+
+    &__description {
+      font-weight: 500;
+    }
+  }
+
+  .quiz-answer {
+    cursor: pointer;
+    &__number {
+      font-size: 30px;
+      width: 50px;
+      border: 1px solid $color-gray;
+      text-align: center;
+      margin-right: 40px;
+      background: white;
+      font-weight: 700;
+    }
+    &__text {
+      font-size: 23px;
+      font-weight: 600;
+      color: $color-gray;
+    }
+
+    &.selected {
+      .quiz-answer__text {
+        color: white;
+      }
+
+      .card {
+        background: $color-red;
+      }
+    }
+  }
+}

@@ -5,9 +5,10 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, QuizComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
