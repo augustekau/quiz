@@ -1,0 +1,12 @@
+:host {
+  $color-red: #f42e35;
+  $color-gray: #3c3c3c;
+  $color-black: #151515;
+
+  .quiz-action {
+    background: $color-gray;
+    padding: 20px 30px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

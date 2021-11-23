@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "quiz-angular-fc5c8": {
+      "hosting": {
+        "quiz": [
+          "quiz-angular-fc5c8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "quiz-angular-fc5c8"
+  }
+}
