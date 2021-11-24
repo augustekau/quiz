@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizComponent } from '../quiz/quiz.component';
 
 @Component({
   selector: 'app-footer',
@@ -11,10 +10,11 @@ export class FooterComponent implements OnInit {
   public progress: number = 0;
   constructor() {}
 
-  nextQuestion() {
-    this.currentQuestion++;
-    // this.progress = this.currentQuestion / this.answers.length;
-  }
+  // nextQuestion() {
+  //   this.currentQuestion++;
+  //   this.progress = (this.currentQuestion / this.answers.length) * 100;
+  //   console.log('Progress: ' + this.progress);
+  // }
 
   ngOnInit(): void {}
 }

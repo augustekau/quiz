@@ -1,4 +1,4 @@
-<div class="row">
+<section class="quiz">
   <div class="row">
     <div class="col-12 quiz-wrapper">
       <div class="row">
@@ -32,7 +32,7 @@
                     {{ item.key }}
                   </div>
                   <div class="quiz-answer__text">
-                    {{ item.value }}
+                    {{ item.value | lowercase }}
                   </div>
                 </div>
               </div>
@@ -43,4 +43,29 @@
       </div>
     </div>
   </div>
-</div>
+  <div class="quiz-actions">
+    <div class="quiz-actions__icon">
+      <img src="../../assets/img/bq1.png" />
+    </div>
+    <div class="row align-items-center">
+      <div class="col-3"></div>
+
+      <div class="col-6">
+        <progressbar
+          [value]="progress"
+          type="danger"
+          [striped]="true"
+        ></progressbar>
+      </div>
+
+      <div class="col-3 text-end">
+        <button
+          class="btn btn-lg btn-light text-uppercase fw-bold"
+          (click)="nextQuestion()"
+        >
+          Next Question
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

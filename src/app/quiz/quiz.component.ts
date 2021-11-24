@@ -16,6 +16,11 @@ export class QuizComponent implements OnInit {
   // ];
 
   public answers: Array<any> = [];
+  // Sukuriamas datos objekas
+  public today: any = new Date();
+  public currentQuestion: number = 0;
+  // Kintamasis saugoti kiek % klausimu yra atsakyta
+  public progress: number = 0;
 
   constructor(db: AngularFireDatabase) {
     // Jei naudojame toki buda, tuomet, ngFor dalyje turime naudoti | async pipe
@@ -28,6 +33,11 @@ export class QuizComponent implements OnInit {
         this.answers = data;
         console.log(this.answers);
       });
+  }
+  nextQuestion() {
+    this.currentQuestion++;
+    this.progress = (this.currentQuestion / this.answers.length) * 100;
+    console.log('Progress: ' + this.progress);
   }
 
   ngOnInit(): void {}
